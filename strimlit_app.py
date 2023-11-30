@@ -29,6 +29,8 @@ import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # streamlit.text(fruityvice_response.json())
 
+import snowflake.connector
+
 # convert json in tabular format 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # shiw the converted json data as a table
